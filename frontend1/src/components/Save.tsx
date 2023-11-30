@@ -30,11 +30,6 @@ const Save = ({
     setStudent({ ...student, [e.target.name]: e.target.value });
   };
   const save = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
-    if (editStudentId) {
-      // If editing, update the existing record
-      addStudent(student);
-    } 
-    else{
     addStudent(student);
     setStudent({
       name: "",
@@ -42,7 +37,6 @@ const Save = ({
       gender: "",
       qualification: "",
     });
-   }
   };
   return (
     <>
