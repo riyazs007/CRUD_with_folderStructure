@@ -39,7 +39,7 @@ const Save = ({
     });
   };
   return (
-    <>
+    <><h1 style={{color:"red"}}>{editStudentId ? "Update Student" : "Add Student"}</h1>
       <table>
         <thead></thead>
         <tbody>
@@ -90,7 +90,7 @@ const Save = ({
           <tr>
             <td></td>
             <td>
-              <button onClick={(e) => save(e)}>{editStudentId ? "Update" : "Save"}</button>
+              <button onClick={(e) => save(e)} style={{color:"white", backgroundColor:"rebeccapurple"}}>{editStudentId ? "Update" : "Save"}</button>
             </td>
           </tr>
         </tbody>

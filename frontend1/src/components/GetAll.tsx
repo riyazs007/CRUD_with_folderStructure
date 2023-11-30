@@ -15,7 +15,7 @@ const GetAll = ({
 
   return (
     <>
-      <table border={1}>
+      <table border={1} style={{backgroundColor:"pink"}}>
         <thead></thead>
         <tbody>
         <tr>
@@ -34,12 +34,12 @@ const GetAll = ({
               <td>{element.gender}</td>
               <td>{element.qualification}</td>
               <td>
-                <button onClick={() => deleteStudent(element._id)}>
+                <button onClick={() => deleteStudent(element._id)} style={{color:"white", backgroundColor:"red"}}>
                   Delete
                 </button>
               </td>
               <td>
-                  <button onClick={() => editStudent(element._id)}>
+                  <button onClick={() => editStudent(element._id)} style={{color:"white", backgroundColor:"blue"}}>
                     Edit
                   </button>
                 </td>
