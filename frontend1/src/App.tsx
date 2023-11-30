@@ -48,7 +48,10 @@ const App = () => {
 
   return (
     <>
+      <br /><br /><br />
       <Save addStudent={addStudent} editStudentId={editStudentId} initialData={initialData}/>
+      <br /><br /><br />
+      <h1><b><u>Students Details</u></b></h1>
       <GetAll allStudents={allStudents} delStudent={delStudent}  editStudent={editStudent}  />   
     </>
   );

@@ -30,6 +30,11 @@ const Save = ({
     setStudent({ ...student, [e.target.name]: e.target.value });
   };
   const save = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
+    if (editStudentId) {
+      // If editing, update the existing record
+      addStudent(student);
+    } 
+    else{
     addStudent(student);
     setStudent({
       name: "",
@@ -37,6 +42,7 @@ const Save = ({
       gender: "",
       qualification: "",
     });
+   }
   };
   return (
     <>
@@ -90,7 +96,7 @@ const Save = ({
           <tr>
             <td></td>
             <td>
-              <button onClick={(e) => save(e)}>Save</button>
+              <button onClick={(e) => save(e)}>{editStudentId ? "Update" : "Save"}</button>
             </td>
           </tr>
         </tbody>
