@@ -31,12 +31,12 @@ const Save = ({
   };
   const save = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
     addStudent(student);
-    setStudent({
+      setStudent({
       name: "",
       age: 0,
       gender: "",
       qualification: "",
-    });
+    });  
   };
   return (
     <><h1 style={{color:"red"}}>{editStudentId ? "Update Student" : "Add Student"}</h1>
